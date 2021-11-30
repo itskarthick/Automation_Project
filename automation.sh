@@ -1,7 +1,7 @@
 #!/bin/bash
-# working from dev branch
 #Karthickeyan Kannan - PGC Devops - Assignment Task 1 
 #Automation script
+# UPDATED SCRIPT FROM DEV BRANCH
 
 #INITIALIZE VARIABLES
 myname="karthickeyan"
