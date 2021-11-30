@@ -1,8 +1,9 @@
 #!/bin/bash
-
 #Karthickeyan Kannan - PGC Devops - Assignment Task 1 
 #Automation script
 
+# UPDATED SCRIPT FROM DEV BRANCH
+# created this comment line for Pull Request 
 #INITIALIZE VARIABLES
 myname="karthickeyan"
 s3_bucket="s3://upgrad-karthickeyan/"
