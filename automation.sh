@@ -2,7 +2,7 @@
 
 #Karthickeyan Kannan - PGC Devops - Assignment Task 1 
 #Automation script
-
+# Script updated from Dev Branch
 #INITIALIZE VARIABLES
 myname="karthickeyan"
 s3_bucket="s3://upgrad-karthickeyan/"
