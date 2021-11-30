@@ -3,7 +3,7 @@
 #Automation script
 
 # UPDATED SCRIPT FROM DEV BRANCH
-
+# created this comment line for Pull Request 
 #INITIALIZE VARIABLES
 myname="karthickeyan"
 s3_bucket="s3://upgrad-karthickeyan/"
