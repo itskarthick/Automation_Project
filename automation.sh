@@ -52,5 +52,23 @@ tar_filename="/tmp/"${myname}"-httpd-logs-"${timestamp}".tar"
 echo $tar_filename
 tar -cvf $tar_filename --absolute-names /var/log/apache2/*.log
 
-aws s3 cp $tar_filename $s3_bucket 
+aws s3 cp $tar_filename $s3_bucket
 
+# AUTOMATION - V0.2
+# BOOKKEEPING - INVENTORY.HTML
+
+FILE="/var/www/html/inventory.html"
+FILESIZE=$(wc -c $tar_filename | awk '{print $1}')
+if test -f "$FILE"; then
+    echo "$FILE exists."
+    echo -e "httpd-logs\tTime\tTar\size" >> $FILE
+else
+    echo -e "LogType\tTimeCreated\tType\tSize" > $FILE
+    echo -e "httpd-logs\t$timestamp\tTar\s$FILESIZE" >> $FILE
+fi
+CRONFILE="/etc/cron.d/automation"
+if test -f "$CRONFILE"; then
+    echo "cron file exists."
+else
+    echo "* * * * * root /Automation_Project/automation.sh" > $CRONFILE
+fi
